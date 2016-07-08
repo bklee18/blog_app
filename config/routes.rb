@@ -2,11 +2,12 @@ Rails.application.routes.draw do
 
   root 'users#hello'
 
-  resources :users, :only => [:index, :show]
+  resources :users
+  # , :only => [:index, :show]
 
-  namespace :admin do
-    resources :users
-  end
+  # namespace :admin do
+  #   resources :users
+  # end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
