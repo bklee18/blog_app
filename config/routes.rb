@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+  root 'users#hello'
+
+  resources :users, :only => [:index, :show]
+
+  namsespace :admin do
+    resources :users
+  end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
