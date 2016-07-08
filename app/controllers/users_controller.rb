@@ -1,7 +1,4 @@
 class UsersController < ApplicationController
-  def hello
-    render html: "hello world"
-  end
 
   def index
     @users = User.all

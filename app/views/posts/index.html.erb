@@ -1,0 +1,9 @@
+<h1>Posts Index</h1>
+
+<%= link_to 'New Post', new_post_path %>
+
+<% @posts.each do |post| %>
+  Title:  <%= post.title %><br>
+  Author: <%= post.user.username %><br>
+  Body: <%= post.body %>
+<% end %>
