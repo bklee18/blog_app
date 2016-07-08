@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
   end
 
   def new
@@ -15,7 +16,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    # binding.pry
     @user = User.new(user_params)
 
     respond_to do |format|
