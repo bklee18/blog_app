@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :posts
+
   before_save { self.email = email.downcase }
   validates :username, :email, :password, presence: true
   validates :username, :email, uniqueness: true

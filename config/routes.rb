@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-  root 'users#hello'
+  root 'users#index'
 
   resources :users
+  resources :posts
   # , :only => [:index, :show]
 
   # namespace :admin do
