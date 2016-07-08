@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :users, :only => [:index, :show]
 
-  namsespace :admin do
+  namespace :admin do
     resources :users
   end
 
