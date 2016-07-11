@@ -14,5 +14,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    user = current_user
+    log_out user if user
+    redirect_to root_url
   end
 end
