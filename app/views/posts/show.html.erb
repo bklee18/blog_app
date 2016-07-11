@@ -2,14 +2,15 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @post.username %>
+  <%= @post.title %>
 </p>
 
 <p>
   <strong>Body:</strong>
-  <%= @post.email %>
+  <%= @post.body %>
 </p>
 
 
-<%= link_to 'Edit', edit_posts_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+
+<%= link_to 'Back', posts_path %> |
+<%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure you want to delete this article' }, class: 'btn' %>
